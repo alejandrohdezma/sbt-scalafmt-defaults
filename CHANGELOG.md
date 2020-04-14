@@ -6,6 +6,7 @@
 
 🚀 **Features**
 
+- Add no-edit warning message to the top of generated file [\#12](https://github.com/alejandrohdezma/sbt-scalafmt-defaults/pull/12) ([alejandrohdezma](https://github.com/alejandrohdezma))
 - Create first version of the plugin [\#3](https://github.com/alejandrohdezma/sbt-scalafmt-defaults/pull/3) ([alejandrohdezma](https://github.com/alejandrohdezma))
 
 📘 **Documentation**
