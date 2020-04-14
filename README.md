@@ -75,7 +75,7 @@ optIn.blankLineBeforeDocstring = true
 
 ```
 
-> You can add the `.scalafmt.conf` file to the repositories `.gitignore`, since its going to be automatically re-created on every build.
+> You can add the `.scalafmt.conf` file to the repository's `.gitignore`, since it's going to be automatically re-created on every build.
 
 [github-action]: https://github.com/alejandrohdezma/sbt-scalafmt-defaults/actions
 [github-action-badge]: https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Falejandrohdezma%2Fsbt-scalafmt-defaults%2Fbadge%3Fref%3Dmaster&style=flat
