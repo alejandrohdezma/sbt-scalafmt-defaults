@@ -3,7 +3,7 @@ ThisBuild / organization := "com.alejandrohdezma"
 
 Global / onChangedBuildSource := ReloadOnSourceChanges
 
-addCommandAlias("ci-test", "scalafmtCheckAll; scalafmtSbtCheck; mdoc")
+addCommandAlias("ci-test", "scalafmtCheckAll; scalafmtSbtCheck; mdoc; scripted")
 addCommandAlias("ci-docs", "mdoc; headerCreateAll")
 
 skip in publish := true
@@ -16,4 +16,5 @@ lazy val docs = project
 
 lazy val `sbt-scalafmt-defaults` = project
   .enablePlugins(SbtPlugin)
+  .settings(scriptedLaunchOpts += s"-Dplugin.version=${version.value}")
   .settings(Compile / unmanagedResources += baseDirectory.value.getParentFile / ".scalafmt.conf")
