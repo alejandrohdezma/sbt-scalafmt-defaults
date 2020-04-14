@@ -8,6 +8,10 @@
 
 - Create first version of the plugin [\#3](https://github.com/alejandrohdezma/sbt-scalafmt-defaults/pull/3) ([alejandrohdezma](https://github.com/alejandrohdezma))
 
+📘 **Documentation**
+
+- Create first version of README.md [\#7](https://github.com/alejandrohdezma/sbt-scalafmt-defaults/pull/7) ([alejandrohdezma](https://github.com/alejandrohdezma))
+
 📈 **Dependency updates**
 
 - Update `sbt-github` to version `0.7.1` [\#6](https://github.com/alejandrohdezma/sbt-scalafmt-defaults/pull/6) ([alejandrohdezma](https://github.com/alejandrohdezma))
