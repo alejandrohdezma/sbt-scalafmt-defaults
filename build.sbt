@@ -13,6 +13,7 @@ lazy val docs = project
   .enablePlugins(MdocPlugin)
   .settings(skip in publish := true)
   .settings(mdocOut := file("."))
+  .settings(mdocVariables += "SCALAFMT_CONF" -> IO.read(file(".scalafmt.conf")))
 
 lazy val `sbt-scalafmt-defaults` = project
   .enablePlugins(SbtPlugin)
