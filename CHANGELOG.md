@@ -1,8 +1,8 @@
 # Changelog
 
-## [Unreleased](https://github.com/alejandrohdezma/sbt-scalafmt-defaults/tree/HEAD)
+## [v0.1.0](https://github.com/alejandrohdezma/sbt-scalafmt-defaults/tree/v0.1.0) (2020-04-14)
 
-[Full Changelog](https://github.com/alejandrohdezma/sbt-scalafmt-defaults/compare/e1f4a5b70d70bacc1187bae63d955ce4d6448278...HEAD)
+[Full Changelog](https://github.com/alejandrohdezma/sbt-scalafmt-defaults/compare/e1f4a5b70d70bacc1187bae63d955ce4d6448278...v0.1.0)
 
 🚀 **Features**
 
