@@ -16,11 +16,11 @@
 
 package com.alejandrohdezma.sbt.scalafmt.defaults
 
-import sbt._
-import sbt.Keys._
-import sbt.plugins.JvmPlugin
-
 import scala.io.Source
+
+import sbt.Keys._
+import sbt._
+import sbt.plugins.JvmPlugin
 
 object SbtScalafmtDefaults extends AutoPlugin {
 
@@ -28,6 +28,7 @@ object SbtScalafmtDefaults extends AutoPlugin {
 
   override def trigger = allRequirements
 
+  @SuppressWarnings(Array("scalafix:Disable.blocking.io"))
   override def globalSettings: Seq[Def.Setting[_]] = Seq(
     onLoad := onLoad.value andThen { state =>
       val configurations = Source.fromResource(".scalafmt.conf", getClass.getClassLoader).mkString
