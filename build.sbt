@@ -19,4 +19,5 @@ lazy val docs = project
 lazy val `sbt-scalafmt-defaults` = project
   .enablePlugins(SbtPlugin)
   .settings(scriptedLaunchOpts += s"-Dplugin.version=${version.value}")
+  .settings(scriptedLaunchOpts += s"-Dscalafmt.conf.content=${IO.read(file(".scalafmt.conf"))}")
   .settings(Compile / unmanagedResources += baseDirectory.value.getParentFile / ".scalafmt.conf")
