@@ -1,5 +1,28 @@
 # Changelog
 
+## [v0.1.1](https://github.com/alejandrohdezma/sbt-scalafmt-defaults/tree/v0.1.1) (2020-05-17)
+
+[Full Changelog](https://github.com/alejandrohdezma/sbt-scalafmt-defaults/compare/v0.1.0...v0.1.1)
+
+📈 **Dependency updates**
+
+- Update sbt-scalafmt to 2.4.0 [\#29](https://github.com/alejandrohdezma/sbt-scalafmt-defaults/pull/29) ([alejandrohdezma](https://github.com/alejandrohdezma))
+- Update scalafmt-core to 2.5.2 [\#28](https://github.com/alejandrohdezma/sbt-scalafmt-defaults/pull/28) ([alejandrohdezma](https://github.com/alejandrohdezma))
+- Update sbt-mdoc to 2.2.0 [\#27](https://github.com/alejandrohdezma/sbt-scalafmt-defaults/pull/27) ([alejandrohdezma](https://github.com/alejandrohdezma))
+- Update sbt-scalafix-defaults to 0.2.2 [\#26](https://github.com/alejandrohdezma/sbt-scalafmt-defaults/pull/26) ([alejandrohdezma](https://github.com/alejandrohdezma))
+- Update sbt-scalafix-defaults to 0.2.1 [\#25](https://github.com/alejandrohdezma/sbt-scalafmt-defaults/pull/25) ([alejandrohdezma](https://github.com/alejandrohdezma))
+- Update scalafmt-core to 2.5.1 [\#24](https://github.com/alejandrohdezma/sbt-scalafmt-defaults/pull/24) ([alejandrohdezma](https://github.com/alejandrohdezma))
+- Update sbt-scalafix-defaults to 0.2.0 [\#23](https://github.com/alejandrohdezma/sbt-scalafmt-defaults/pull/23) ([alejandrohdezma](https://github.com/alejandrohdezma))
+- Update scalafmt-core to 2.5.0 [\#22](https://github.com/alejandrohdezma/sbt-scalafmt-defaults/pull/22) ([alejandrohdezma](https://github.com/alejandrohdezma))
+- Update sbt-ci-release to 1.5.3 [\#21](https://github.com/alejandrohdezma/sbt-scalafmt-defaults/pull/21) ([alejandrohdezma](https://github.com/alejandrohdezma))
+- Update sbt-scalafix to 0.9.15 [\#20](https://github.com/alejandrohdezma/sbt-scalafmt-defaults/pull/20) ([alejandrohdezma](https://github.com/alejandrohdezma))
+- Update sbt-github to version 0.8.2 [\#19](https://github.com/alejandrohdezma/sbt-scalafmt-defaults/pull/19) ([alejandrohdezma](https://github.com/alejandrohdezma))
+- Update Scala, SBT & plugins to latest version [\#17](https://github.com/alejandrohdezma/sbt-scalafmt-defaults/pull/17) ([alejandrohdezma](https://github.com/alejandrohdezma))
+
+**Merged pull requests:**
+
+- Add CODEOWNERS [\#18](https://github.com/alejandrohdezma/sbt-scalafmt-defaults/pull/18) ([alejandrohdezma](https://github.com/alejandrohdezma))
+
 ## [v0.1.0](https://github.com/alejandrohdezma/sbt-scalafmt-defaults/tree/v0.1.0) (2020-04-14)
 
 [Full Changelog](https://github.com/alejandrohdezma/sbt-scalafmt-defaults/compare/e1f4a5b70d70bacc1187bae63d955ce4d6448278...v0.1.0)
