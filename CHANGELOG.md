@@ -1,5 +1,17 @@
 # Changelog
 
+## [v0.2.0](https://github.com/alejandrohdezma/sbt-scalafmt-defaults/tree/v0.2.0) (2020-05-20)
+
+[Full Changelog](https://github.com/alejandrohdezma/sbt-scalafmt-defaults/compare/v0.1.1...v0.2.0)
+
+🚀 **Features**
+
+- Change default max column to `120` [\#31](https://github.com/alejandrohdezma/sbt-scalafmt-defaults/pull/31) ([alejandrohdezma](https://github.com/alejandrohdezma))
+
+**Merged pull requests:**
+
+- Change readme installation to using `%` \(instead of `%%`\) [\#30](https://github.com/alejandrohdezma/sbt-scalafmt-defaults/pull/30) ([alejandrohdezma](https://github.com/alejandrohdezma))
+
 ## [v0.1.1](https://github.com/alejandrohdezma/sbt-scalafmt-defaults/tree/v0.1.1) (2020-05-17)
 
 [Full Changelog](https://github.com/alejandrohdezma/sbt-scalafmt-defaults/compare/v0.1.0...v0.1.1)

@@ -7,7 +7,7 @@
 Add the following line to your `plugins.sbt` file:
 
 ```sbt
-addSbtPlugin("com.alejandrohdezma" % "sbt-scalafmt-defaults" % "0.1.1")
+addSbtPlugin("com.alejandrohdezma" % "sbt-scalafmt-defaults" % "0.2.0")
 ```
 
 > You'll also need to provide the [`sbt-scalafmt` plugin](https://github.com/scalameta/sbt-scalafmt). 
@@ -19,7 +19,7 @@ The included plugin is automatically activated. It will create a `.scalafmt.conf
 ```hocon
 version = 2.5.2
 
-maxColumn = 100
+maxColumn = 120
 
 newlines {
   alwaysBeforeTopLevelStatements = true
