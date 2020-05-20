@@ -7,7 +7,7 @@
 Add the following line to your `plugins.sbt` file:
 
 ```sbt
-addSbtPlugin("com.alejandrohdezma" %% "sbt-scalafmt-defaults" % "@VERSION@")
+addSbtPlugin("com.alejandrohdezma" % "sbt-scalafmt-defaults" % "@VERSION@")
 ```
 
 > You'll also need to provide the [`sbt-scalafmt` plugin](https://github.com/scalameta/sbt-scalafmt). 
