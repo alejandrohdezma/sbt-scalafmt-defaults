@@ -14,7 +14,7 @@ addSbtPlugin("com.alejandrohdezma" % "sbt-scalafmt-defaults" % "@VERSION@")
 
 ## Usage
 
-The included plugin is automatically activated. It will create a `.scalafmt.conf` in your project's root folder with the following content:
+The included plugin is automatically activated. It will enable `scalafmtOnCompile` by default and will create a `.scalafmt.conf` in your project's root folder with the following content:
 
 ```hocon
 @SCALAFMT_CONF@
