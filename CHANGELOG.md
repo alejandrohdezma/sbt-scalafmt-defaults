@@ -1,5 +1,40 @@
 # Changelog
 
+## [v0.3.0](https://github.com/alejandrohdezma/sbt-scalafmt-defaults/tree/v0.3.0) (2020-07-31)
+
+[Full Changelog](https://github.com/alejandrohdezma/sbt-scalafmt-defaults/compare/v0.2.0...v0.3.0)
+
+⚠️ **Breaking changes**
+
+- Add dependency with `sbt-scalafmt` and enable `scalafmtOnCompile` by default [\#53](https://github.com/alejandrohdezma/sbt-scalafmt-defaults/pull/53) ([alejandrohdezma](https://github.com/alejandrohdezma))
+
+🚀 **Features**
+
+- Allow adding extra configurations [\#54](https://github.com/alejandrohdezma/sbt-scalafmt-defaults/pull/54) ([alejandrohdezma](https://github.com/alejandrohdezma))
+
+📈 **Dependency updates**
+
+- Update sbt-fix to 0.6.1 [\#51](https://github.com/alejandrohdezma/sbt-scalafmt-defaults/pull/51) ([alejandrohdezma](https://github.com/alejandrohdezma))
+- Update sbt-fix to 0.6.0 [\#50](https://github.com/alejandrohdezma/sbt-scalafmt-defaults/pull/50) ([alejandrohdezma](https://github.com/alejandrohdezma))
+- Update scalafmt-core to 2.6.4 [\#49](https://github.com/alejandrohdezma/sbt-scalafmt-defaults/pull/49) ([alejandrohdezma](https://github.com/alejandrohdezma))
+- Update scalafmt-core to 2.6.3 [\#48](https://github.com/alejandrohdezma/sbt-scalafmt-defaults/pull/48) ([alejandrohdezma](https://github.com/alejandrohdezma))
+- Update sbt-scalafix to 0.9.19 [\#47](https://github.com/alejandrohdezma/sbt-scalafmt-defaults/pull/47) ([alejandrohdezma](https://github.com/alejandrohdezma))
+- Update scalafmt-core to 2.6.2 [\#46](https://github.com/alejandrohdezma/sbt-scalafmt-defaults/pull/46) ([alejandrohdezma](https://github.com/alejandrohdezma))
+- Update sbt-scalafix to 0.9.18 [\#45](https://github.com/alejandrohdezma/sbt-scalafmt-defaults/pull/45) ([alejandrohdezma](https://github.com/alejandrohdezma))
+- Update sbt to 1.3.13 [\#44](https://github.com/alejandrohdezma/sbt-scalafmt-defaults/pull/44) ([alejandrohdezma](https://github.com/alejandrohdezma))
+- Update sbt-tpolecat to 0.1.13 [\#43](https://github.com/alejandrohdezma/sbt-scalafmt-defaults/pull/43) ([alejandrohdezma](https://github.com/alejandrohdezma))
+- Update sbt-mdoc to 2.2.3 [\#42](https://github.com/alejandrohdezma/sbt-scalafmt-defaults/pull/42) ([alejandrohdezma](https://github.com/alejandrohdezma))
+- Update scalafmt-core to 2.6.1 [\#41](https://github.com/alejandrohdezma/sbt-scalafmt-defaults/pull/41) ([alejandrohdezma](https://github.com/alejandrohdezma))
+- Update scalafmt-core to 2.6.0 [\#40](https://github.com/alejandrohdezma/sbt-scalafmt-defaults/pull/40) ([alejandrohdezma](https://github.com/alejandrohdezma))
+- Update sbt-mdoc to 2.2.2 [\#39](https://github.com/alejandrohdezma/sbt-scalafmt-defaults/pull/39) ([alejandrohdezma](https://github.com/alejandrohdezma))
+- Update sbt-scalafix to 0.9.17 [\#38](https://github.com/alejandrohdezma/sbt-scalafmt-defaults/pull/38) ([alejandrohdezma](https://github.com/alejandrohdezma))
+- Update sbt-mdoc to 2.2.1 [\#37](https://github.com/alejandrohdezma/sbt-scalafmt-defaults/pull/37) ([alejandrohdezma](https://github.com/alejandrohdezma))
+- Update sbt-tpolecat to 0.1.12 [\#36](https://github.com/alejandrohdezma/sbt-scalafmt-defaults/pull/36) ([alejandrohdezma](https://github.com/alejandrohdezma))
+- Update sbt to 1.3.12 [\#35](https://github.com/alejandrohdezma/sbt-scalafmt-defaults/pull/35) ([alejandrohdezma](https://github.com/alejandrohdezma))
+- Update sbt-scalafix to 0.9.16 [\#34](https://github.com/alejandrohdezma/sbt-scalafmt-defaults/pull/34) ([alejandrohdezma](https://github.com/alejandrohdezma))
+- Update scalafmt-core to 2.5.3 [\#33](https://github.com/alejandrohdezma/sbt-scalafmt-defaults/pull/33) ([alejandrohdezma](https://github.com/alejandrohdezma))
+- Update sbt-scalafix-defaults to 0.2.3 [\#32](https://github.com/alejandrohdezma/sbt-scalafmt-defaults/pull/32) ([alejandrohdezma](https://github.com/alejandrohdezma))
+
 ## [v0.2.0](https://github.com/alejandrohdezma/sbt-scalafmt-defaults/tree/v0.2.0) (2020-05-20)
 
 [Full Changelog](https://github.com/alejandrohdezma/sbt-scalafmt-defaults/compare/v0.1.1...v0.2.0)
