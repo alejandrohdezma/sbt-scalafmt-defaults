@@ -22,6 +22,7 @@ import sbt.Keys._
 import sbt._
 
 import org.scalafmt.sbt.ScalafmtPlugin
+import org.scalafmt.sbt.ScalafmtPlugin.autoImport._
 
 object SbtScalafmtDefaults extends AutoPlugin {
 
@@ -32,6 +33,7 @@ object SbtScalafmtDefaults extends AutoPlugin {
   @SuppressWarnings(Array("scalafix:Disable.blocking.io"))
   override def globalSettings: Seq[Def.Setting[_]] =
     Seq(
+      scalafmtOnCompile := true,
       onLoad := onLoad.value andThen { state =>
         val defaults = Source.fromResource(".scalafmt.conf", getClass.getClassLoader).mkString
         IO.write(file(".scalafmt.conf"), defaults)
