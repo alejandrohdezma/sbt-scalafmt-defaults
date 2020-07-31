@@ -20,11 +20,12 @@ import scala.io.Source
 
 import sbt.Keys._
 import sbt._
-import sbt.plugins.JvmPlugin
+
+import org.scalafmt.sbt.ScalafmtPlugin
 
 object SbtScalafmtDefaults extends AutoPlugin {
 
-  override def requires: Plugins = JvmPlugin
+  override def requires: Plugins = ScalafmtPlugin
 
   override def trigger = allRequirements
 

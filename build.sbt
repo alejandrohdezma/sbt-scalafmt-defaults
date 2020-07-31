@@ -9,6 +9,8 @@ addCommandAlias("ci-publish", "github; ci-release")
 
 skip in publish := true
 
+lazy val scalafmt = "org.scalameta" % "sbt-scalafmt" % "[2.0.0,)" % Provided // scala-steward:off
+
 lazy val docs = project
   .in(file("sbt-scalafmt-defaults-docs"))
   .enablePlugins(MdocPlugin)
@@ -18,6 +20,7 @@ lazy val docs = project
 
 lazy val `sbt-scalafmt-defaults` = project
   .enablePlugins(SbtPlugin)
+  .settings(addSbtPlugin(scalafmt))
   .settings(scriptedLaunchOpts += s"-Dplugin.version=${version.value}")
   .settings(scriptedLaunchOpts += s"-Dscalafmt.conf.content=${IO.read(file(".scalafmt.conf"))}")
   .settings(Compile / unmanagedResources += baseDirectory.value.getParentFile / ".scalafmt.conf")
