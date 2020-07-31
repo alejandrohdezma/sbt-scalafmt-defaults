@@ -32,20 +32,10 @@ object SbtScalafmtDefaults extends AutoPlugin {
   override def globalSettings: Seq[Def.Setting[_]] =
     Seq(
       onLoad := onLoad.value andThen { state =>
-        val configurations = Source.fromResource(".scalafmt.conf", getClass.getClassLoader).mkString
-        IO.write(file(".scalafmt.conf"), noEditWarning)
-        IO.append(file(".scalafmt.conf"), configurations)
+        val defaults = Source.fromResource(".scalafmt.conf", getClass.getClassLoader).mkString
+        IO.write(file(".scalafmt.conf"), defaults)
         state
       }
     )
-
-  private val noEditWarning =
-    """# This file has been automatically generated and should
-      |# not be edited nor added to source control systems.
-      |
-      |# To edit the original configurations go to
-      |# https://github.com/alejandrohdezma/sbt-scalafmt-defaults/edit/master/.scalafmt.conf
-      |
-      |""".stripMargin
 
 }
