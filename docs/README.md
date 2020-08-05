@@ -14,13 +14,18 @@ addSbtPlugin("com.alejandrohdezma" % "sbt-scalafmt-defaults" % "@VERSION@")
 
 ## Usage
 
-The included plugin is automatically activated. It will create a `.scalafmt.conf` in your project's root folder with the following content:
+The included plugin is automatically activated. It will enable `scalafmtOnCompile` by default and will create a `.scalafmt.conf` in your project's root folder with the following content:
 
 ```hocon
 @SCALAFMT_CONF@
 ```
 
 > You can add the `.scalafmt.conf` file to the repository's `.gitignore`, since it's going to be automatically re-created on every build.
+
+### Extra configurations
+
+Extra configurations can be added to a file named `.scalafmt-extra.conf` at the root of your repository. The content of this file will be automatically appended to the auto-generated `.scalafmt.conf`.
+
 
 [github-action]: https://github.com/alejandrohdezma/sbt-scalafmt-defaults/actions
 [github-action-badge]: https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Falejandrohdezma%2Fsbt-scalafmt-defaults%2Fbadge%3Fref%3Dmaster&style=flat

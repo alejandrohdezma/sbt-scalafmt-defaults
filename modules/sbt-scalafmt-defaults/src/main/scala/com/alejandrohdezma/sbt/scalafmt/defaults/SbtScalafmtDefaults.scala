@@ -20,32 +20,31 @@ import scala.io.Source
 
 import sbt.Keys._
 import sbt._
-import sbt.plugins.JvmPlugin
+
+import org.scalafmt.sbt.ScalafmtPlugin
+import org.scalafmt.sbt.ScalafmtPlugin.autoImport._
 
 object SbtScalafmtDefaults extends AutoPlugin {
 
-  override def requires: Plugins = JvmPlugin
+  override def requires: Plugins = ScalafmtPlugin
 
   override def trigger = allRequirements
 
   @SuppressWarnings(Array("scalafix:Disable.blocking.io"))
   override def globalSettings: Seq[Def.Setting[_]] =
     Seq(
+      scalafmtOnCompile := true,
       onLoad := onLoad.value andThen { state =>
-        val configurations = Source.fromResource(".scalafmt.conf", getClass.getClassLoader).mkString
-        IO.write(file(".scalafmt.conf"), noEditWarning)
-        IO.append(file(".scalafmt.conf"), configurations)
+        val defaults = Source.fromResource(".scalafmt.conf", getClass.getClassLoader).mkString
+        IO.write(file(".scalafmt.conf"), defaults)
+
+        val extra = file(".scalafmt-extra.conf")
+
+        if (extra.exists())
+          IO.append(file(".scalafmt.conf"), "\n" + IO.read(extra))
+
         state
       }
     )
-
-  private val noEditWarning =
-    """# This file has been automatically generated and should
-      |# not be edited nor added to source control systems.
-      |
-      |# To edit the original configurations go to
-      |# https://github.com/alejandrohdezma/sbt-scalafmt-defaults/edit/master/.scalafmt.conf
-      |
-      |""".stripMargin
 
 }
