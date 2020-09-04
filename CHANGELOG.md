@@ -1,5 +1,19 @@
 # Changelog
 
+## [v0.3.1](https://github.com/alejandrohdezma/sbt-scalafmt-defaults/tree/v0.3.1) (2020-09-04)
+
+[Full Changelog](https://github.com/alejandrohdezma/sbt-scalafmt-defaults/compare/v0.3.0...v0.3.1)
+
+📈 **Dependency updates**
+
+- Update sbt-mdoc to 2.2.6 [\#60](https://github.com/alejandrohdezma/sbt-scalafmt-defaults/pull/60) ([alejandrohdezma](https://github.com/alejandrohdezma))
+- Update sbt-scalafix to 0.9.20 [\#59](https://github.com/alejandrohdezma/sbt-scalafmt-defaults/pull/59) ([alejandrohdezma](https://github.com/alejandrohdezma))
+- Update sbt-mdoc to 2.2.5 [\#58](https://github.com/alejandrohdezma/sbt-scalafmt-defaults/pull/58) ([alejandrohdezma](https://github.com/alejandrohdezma))
+- Update sbt-mdoc to 2.2.4 [\#57](https://github.com/alejandrohdezma/sbt-scalafmt-defaults/pull/57) ([alejandrohdezma](https://github.com/alejandrohdezma))
+- Update sbt-scalafix-defaults to 0.3.0 [\#56](https://github.com/alejandrohdezma/sbt-scalafmt-defaults/pull/56) ([alejandrohdezma](https://github.com/alejandrohdezma))
+- Update sbt-scalafmt to 2.4.2 [\#55](https://github.com/alejandrohdezma/sbt-scalafmt-defaults/pull/55) ([alejandrohdezma](https://github.com/alejandrohdezma))
+- Update sbt-fix to 0.7.0 [\#52](https://github.com/alejandrohdezma/sbt-scalafmt-defaults/pull/52) ([alejandrohdezma](https://github.com/alejandrohdezma))
+
 ## [v0.3.0](https://github.com/alejandrohdezma/sbt-scalafmt-defaults/tree/v0.3.0) (2020-07-31)
 
 [Full Changelog](https://github.com/alejandrohdezma/sbt-scalafmt-defaults/compare/v0.2.0...v0.3.0)
