@@ -1,5 +1,23 @@
 # Changelog
 
+## [v0.4.0](https://github.com/alejandrohdezma/sbt-scalafmt-defaults/tree/v0.4.0) (2020-09-30)
+
+[Full Changelog](https://github.com/alejandrohdezma/sbt-scalafmt-defaults/compare/v0.3.1...v0.4.0)
+
+📈 **Dependency updates**
+
+- Update scalafmt-core to 2.7.3 [\#71](https://github.com/alejandrohdezma/sbt-scalafmt-defaults/pull/71) ([alejandrohdezma](https://github.com/alejandrohdezma))
+- Update sbt-scalafix to 0.9.21 [\#70](https://github.com/alejandrohdezma/sbt-scalafmt-defaults/pull/70) ([alejandrohdezma](https://github.com/alejandrohdezma))
+- Update scalafmt-core to 2.7.2 [\#69](https://github.com/alejandrohdezma/sbt-scalafmt-defaults/pull/69) ([alejandrohdezma](https://github.com/alejandrohdezma))
+- Update sbt-mdoc to 2.2.9 [\#68](https://github.com/alejandrohdezma/sbt-scalafmt-defaults/pull/68) ([alejandrohdezma](https://github.com/alejandrohdezma))
+- Update sbt-scalafix-defaults to 0.4.0 [\#67](https://github.com/alejandrohdezma/sbt-scalafmt-defaults/pull/67) ([alejandrohdezma](https://github.com/alejandrohdezma))
+- Update sbt-scalafix-defaults to 0.3.2 [\#66](https://github.com/alejandrohdezma/sbt-scalafmt-defaults/pull/66) ([alejandrohdezma](https://github.com/alejandrohdezma))
+- Update scalafmt-core to 2.7.1 [\#65](https://github.com/alejandrohdezma/sbt-scalafmt-defaults/pull/65) ([alejandrohdezma](https://github.com/alejandrohdezma))
+- Update sbt-mdoc to 2.2.8 [\#64](https://github.com/alejandrohdezma/sbt-scalafmt-defaults/pull/64) ([alejandrohdezma](https://github.com/alejandrohdezma))
+- Update sbt-mdoc to 2.2.7 [\#63](https://github.com/alejandrohdezma/sbt-scalafmt-defaults/pull/63) ([alejandrohdezma](https://github.com/alejandrohdezma))
+- Update scalafmt-core to 2.7.0 [\#62](https://github.com/alejandrohdezma/sbt-scalafmt-defaults/pull/62) ([alejandrohdezma](https://github.com/alejandrohdezma))
+- Update sbt-scalafix-defaults to 0.3.1 [\#61](https://github.com/alejandrohdezma/sbt-scalafmt-defaults/pull/61) ([alejandrohdezma](https://github.com/alejandrohdezma))
+
 ## [v0.3.1](https://github.com/alejandrohdezma/sbt-scalafmt-defaults/tree/v0.3.1) (2020-09-04)
 
 [Full Changelog](https://github.com/alejandrohdezma/sbt-scalafmt-defaults/compare/v0.3.0...v0.3.1)

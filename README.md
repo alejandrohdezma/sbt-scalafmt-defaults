@@ -7,7 +7,7 @@
 Add the following line to your `plugins.sbt` file:
 
 ```sbt
-addSbtPlugin("com.alejandrohdezma" % "sbt-scalafmt-defaults" % "0.3.1")
+addSbtPlugin("com.alejandrohdezma" % "sbt-scalafmt-defaults" % "0.4.0")
 ```
 
 > You'll also need to provide the [`sbt-scalafmt` plugin](https://github.com/scalameta/sbt-scalafmt). 
@@ -23,7 +23,7 @@ The included plugin is automatically activated. It will enable `scalafmtOnCompil
 # To edit the original configurations go to
 # https://github.com/alejandrohdezma/sbt-scalafmt-defaults/edit/master/.scalafmt.conf
 
-version = 2.6.4
+version = 2.7.3
 
 maxColumn = 120
 
