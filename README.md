@@ -7,7 +7,7 @@
 Add the following line to your `plugins.sbt` file:
 
 ```sbt
-addSbtPlugin("com.alejandrohdezma" % "sbt-scalafmt-defaults" % "0.4.2")
+addSbtPlugin("com.alejandrohdezma" % "sbt-scalafmt-defaults" % "0.4.3")
 ```
 
 > You'll also need to provide the [`sbt-scalafmt` plugin](https://github.com/scalameta/sbt-scalafmt).
@@ -34,7 +34,10 @@ newlines {
 
 style = defaultWithAlign
 
+assumeStandardLibraryStripMargin = true
+
 align {
+  stripMargin = true
   tokens.add = [
     {
       code = ":=", owner = "Term.ApplyInfix"
@@ -60,7 +63,8 @@ binPack {
   literalsExclude = [ "Term.Name" ]
 }
 
-docstrings = JavaDoc
+docstrings.style = "SpaceAsterisk"
+docstrings.oneline = fold
 
 rewrite {
   rules = [
