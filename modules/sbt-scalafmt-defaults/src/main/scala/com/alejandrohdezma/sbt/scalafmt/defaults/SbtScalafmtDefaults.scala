@@ -34,7 +34,7 @@ object SbtScalafmtDefaults extends AutoPlugin {
   override def globalSettings: Seq[Def.Setting[_]] =
     Seq(
       scalafmtOnCompile := !sys.env.contains("CI"),
-      onLoad            := onLoad.value.andThen { state =>
+      onLoad := onLoad.value.andThen { state =>
         val defaults = Source.fromResource(".scalafmt.conf", getClass.getClassLoader).mkString
         IO.write(file(".scalafmt.conf"), defaults)
 
