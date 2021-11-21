@@ -7,7 +7,7 @@
 Add the following line to your `plugins.sbt` file:
 
 ```sbt
-addSbtPlugin("com.alejandrohdezma" % "sbt-scalafmt-defaults" % "0.4.4")
+addSbtPlugin("com.alejandrohdezma" % "sbt-scalafmt-defaults" % "0.4.5")
 ```
 
 > You'll also need to provide the [`sbt-scalafmt` plugin](https://github.com/scalameta/sbt-scalafmt).
@@ -23,7 +23,7 @@ The included plugin is automatically activated. It will enable `scalafmtOnCompil
 # To edit the original configurations go to
 # https://github.com/alejandrohdezma/sbt-scalafmt-defaults/edit/master/.scalafmt.conf
 
-version = 3.0.2
+version = 3.0.6
 
 # Number of maximum characters in a column
 maxColumn = 120
@@ -110,7 +110,7 @@ rewriteTokens = {
 includeCurlyBraceInSelectChains = false
 
 # Ensure code blocks inside markdown files get formated too
-project.includePaths."+" = ["glob:**.md"]
+project.includePaths = ["glob:**.scala", "glob:**.sbt", "glob:**.sc", "glob:**.md"]
 ```
 
 > You can add the `.scalafmt.conf` file to the repository's `.gitignore`, since it's going to be automatically re-created on every build.
