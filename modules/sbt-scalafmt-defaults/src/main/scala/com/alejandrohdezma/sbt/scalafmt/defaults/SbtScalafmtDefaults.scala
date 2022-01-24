@@ -30,21 +30,42 @@ object SbtScalafmtDefaults extends AutoPlugin {
 
   override def trigger = allRequirements
 
-  @SuppressWarnings(Array("scalafix:Disable.blocking.io"))
   override def globalSettings: Seq[Def.Setting[_]] =
-    Seq(
-      scalafmtOnCompile := !sys.env.contains("CI"),
-      onLoad := onLoad.value.andThen { state =>
-        val defaults = Source.fromResource(".scalafmt.conf", getClass.getClassLoader).mkString
-        IO.write(file(".scalafmt.conf"), defaults)
+    Seq(scalafmtOnCompile := !sys.env.contains("CI"))
 
-        val extra = file(".scalafmt-extra.conf")
+  @SuppressWarnings(Array("scalafix:Disable.blocking.io", "scalafix:DisableSyntax.=="))
+  override def buildSettings: Seq[Setting[_]] = Seq(
+    scalafmtConfig := {
+      val xSource3 = scalacOptions.value.seq.exists(_ == "-Xsource:3")
 
-        if (extra.exists())
-          IO.append(file(".scalafmt.conf"), "\n" + IO.read(extra))
-
-        state
+      val dialect = scalaVersion.value match {
+        case v if v.startsWith("2.11")             => "scala211"
+        case v if v.startsWith("2.12") && xSource3 => "scala212source3"
+        case v if v.startsWith("2.12")             => "scala212"
+        case v if v.startsWith("2.13") && xSource3 => "scala213source3"
+        case v if v.startsWith("2.13")             => "scala213"
+        case v if v.startsWith("3")                => "scala3"
       }
-    )
+
+      val defaults = Source
+        .fromResource(".scalafmt.conf", getClass.getClassLoader)
+        .getLines()
+        .toList
+        .map {
+          case line if line.contains("runner.dialect") => s"runner.dialect = $dialect"
+          case line                                    => line
+        }
+        .mkString("\n")
+
+      IO.write(file(".scalafmt.conf"), defaults)
+
+      val extra = file(".scalafmt-extra.conf")
+
+      if (extra.exists())
+        IO.append(file(".scalafmt.conf"), "\n" + IO.read(extra))
+
+      file(".scalafmt.conf")
+    }
+  )
 
 }
