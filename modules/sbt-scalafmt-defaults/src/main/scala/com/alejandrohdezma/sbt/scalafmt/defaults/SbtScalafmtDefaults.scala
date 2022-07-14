@@ -30,9 +30,6 @@ object SbtScalafmtDefaults extends AutoPlugin {
 
   override def trigger = allRequirements
 
-  override def globalSettings: Seq[Def.Setting[_]] =
-    Seq(scalafmtOnCompile := !sys.env.contains("CI"))
-
   @SuppressWarnings(Array("scalafix:Disable.blocking.io", "scalafix:DisableSyntax.=="))
   override def buildSettings: Seq[Setting[_]] = Seq(
     scalafmtConfig := {
