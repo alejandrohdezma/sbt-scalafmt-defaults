@@ -5,14 +5,14 @@
 Add the following line to your `plugins.sbt` file:
 
 ```sbt
-addSbtPlugin("com.alejandrohdezma" % "sbt-scalafmt-defaults" % "0.6.0")
+addSbtPlugin("com.alejandrohdezma" % "sbt-scalafmt-defaults" % "0.7.0")
 ```
 
 > You'll also need to provide the [`sbt-scalafmt` plugin](https://github.com/scalameta/sbt-scalafmt).
 
 ## Usage
 
-The included plugin is automatically activated. It will enable `scalafmtOnCompile` by default (except when running on CI) and will create a `.scalafmt.conf` in your project's root folder with the following content:
+The included plugin is automatically activated. It will create a `.scalafmt.conf` in your project's root folder with the following content:
 
 ```hocon
 # This file has been automatically generated and should
