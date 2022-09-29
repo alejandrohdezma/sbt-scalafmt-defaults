@@ -5,7 +5,7 @@
 Add the following line to your `plugins.sbt` file:
 
 ```sbt
-addSbtPlugin("com.alejandrohdezma" % "sbt-scalafmt-defaults" % "0.7.0")
+addSbtPlugin("com.alejandrohdezma" % "sbt-scalafmt-defaults" % "0.7.1")
 ```
 
 > You'll also need to provide the [`sbt-scalafmt` plugin](https://github.com/scalameta/sbt-scalafmt).
@@ -114,6 +114,7 @@ includeCurlyBraceInSelectChains = false
 
 # Ensure code blocks inside markdown files get formated too
 project.includePaths = ["glob:**.scala", "glob:**.sbt", "glob:**.sc", "glob:**.md"]
+project.excludePaths = ["glob:**metals.sbt"]
 ```
 
 > You can add the `.scalafmt.conf` file to the repository's `.gitignore`, since it's going to be automatically re-created on every build.
