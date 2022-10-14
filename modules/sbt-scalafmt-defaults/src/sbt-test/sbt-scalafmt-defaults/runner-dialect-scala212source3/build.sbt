@@ -1,4 +1,4 @@
-ThisBuild / scalaVersion  := "2.12.17"
+ThisBuild / scalaVersion  := "2.13.10"
 ThisBuild / scalacOptions += "-Xsource:3"
 
 TaskKey[Unit]("checkScalafmtConfFile") := {
