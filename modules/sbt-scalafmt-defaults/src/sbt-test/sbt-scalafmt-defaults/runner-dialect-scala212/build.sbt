@@ -1,4 +1,4 @@
-ThisBuild / scalaVersion := "2.13.10"
+ThisBuild / scalaVersion := "2.13.10" // scala-steward:off
 
 TaskKey[Unit]("checkScalafmtConfFile") := {
   val expected = sys
