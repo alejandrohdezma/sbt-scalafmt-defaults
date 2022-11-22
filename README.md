@@ -5,7 +5,7 @@
 Add the following line to your `plugins.sbt` file:
 
 ```sbt
-addSbtPlugin("com.alejandrohdezma" % "sbt-scalafmt-defaults" % "0.7.1")
+addSbtPlugin("com.alejandrohdezma" % "sbt-scalafmt-defaults" % "0.8.0")
 ```
 
 > You'll also need to provide the [`sbt-scalafmt` plugin](https://github.com/scalameta/sbt-scalafmt).
@@ -21,7 +21,7 @@ The included plugin is automatically activated. It will create a `.scalafmt.conf
 # To edit the original configurations go to
 # https://github.com/alejandrohdezma/sbt-scalafmt-defaults/edit/master/.scalafmt.conf
 
-version = 3.5.8
+version = 3.6.1
 
 # This value is automatically set based on your current `ThisBuild / scalaVersion` setting.
 # `scala212source3`/`scala213source3` will be set if `scalaVersion` is set to any of those versions
