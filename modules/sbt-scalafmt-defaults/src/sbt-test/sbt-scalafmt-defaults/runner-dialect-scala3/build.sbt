@@ -1,9 +1,13 @@
 ThisBuild / scalaVersion := "3.1.0"
 
-TaskKey[Unit]("checkScalafmtConfFile") := {
-  val expected = sys
-    .props("scalafmt.conf.content")
-    .replace("runner.dialect = scala212", "runner.dialect = scala3")
+munitSuites += "ScriptedSuite" -> new FunSuite {
 
-  assert(IO.read(file(".scalafmt.conf")) == expected)
+  test("Files match") {
+    val expected = sys
+      .props("scalafmt.conf.content")
+      .replace("runner.dialect = scala212", "runner.dialect = scala3")
+
+    assertNoDiff(IO.read(file(".scalafmt.conf")), expected)
+  }
+
 }
