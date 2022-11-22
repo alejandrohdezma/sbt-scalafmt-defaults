@@ -1,4 +1,4 @@
 # this test ensures the .scalafmt.conf file is correctly copied
 > scalafmt
-> checkScalafmtConfFile
+> munitScripted
 $ must-mirror src/main/scala/Main.scala src/main/resources/Main.scala_expected
