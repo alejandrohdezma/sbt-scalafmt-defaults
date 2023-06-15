@@ -82,8 +82,3 @@ website/build
 
 .scalafix.conf
 
-### sbt-scalafmt-defaults ###
-# Scalafmt configuration file is automatically downloaded by `sbt-scalafmt-defaults`
-# https://github.com/alejandrohdezma/sbt-scalafmt-defaults
-
-.scalafmt.conf
