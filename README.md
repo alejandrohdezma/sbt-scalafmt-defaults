@@ -5,7 +5,7 @@
 Add the following line to your `plugins.sbt` file:
 
 ```sbt
-addSbtPlugin("com.alejandrohdezma" % "sbt-scalafmt-defaults" % "0.8.0")
+addSbtPlugin("com.alejandrohdezma" % "sbt-scalafmt-defaults" % "0.9.0")
 ```
 
 > You'll also need to provide the [`sbt-scalafmt` plugin](https://github.com/scalameta/sbt-scalafmt).
@@ -21,7 +21,7 @@ The included plugin is automatically activated. It will create a `.scalafmt.conf
 # To edit the original configurations go to
 # https://github.com/alejandrohdezma/sbt-scalafmt-defaults/edit/master/.scalafmt.conf
 
-version = 3.6.1
+version = "3.7.4"
 
 # This value is automatically set based on your current `ThisBuild / scalaVersion` setting.
 # `scala212source3`/`scala213source3` will be set if `scalaVersion` is set to any of those versions
@@ -81,25 +81,20 @@ docstrings.style = "SpaceAsterisk"
 docstrings.wrap = yes
 docstrings.oneline = fold
 
-# Avoid infix calls (except for operators)
-rewrite.rules += AvoidInfix
+rewrite.rules = [
+  AvoidInfix, # Avoid infix calls (except for operators)
+  RedundantBraces,
+  RedundantParens, # Ensure redundant parentheses are removed
+  SortModifiers, # Ensure modifiers like `implicit` or `final` are sorted the same
+  PreferCurlyFors, # Replaces parentheses into curly braces in for comprehensions that contain multiple enumerator generators
+  Imports
+]
 
 # Ensure redundant braces are removed
-rewrite.rules += RedundantBraces
 rewrite.redundantBraces.maxLines = 1
 rewrite.redundantBraces.stringInterpolation = true
 
-# Ensure redundant parentheses are removed
-rewrite.rules += RedundantParens
-
-# Ensure modifiers like `implicit` or `final` are sorted the same
-rewrite.rules += SortModifiers
-
-# Replaces parentheses into curly braces in for comprehensions that contain multiple enumerator generators
-rewrite.rules += PreferCurlyFors
-
 # Ensure a separate line is created for each selector within a `{...}` import.
-rewrite.rules += Imports
 rewrite.imports.expand = true
 
 # Avoid ASCII tokens
