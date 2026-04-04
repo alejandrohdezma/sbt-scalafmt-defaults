@@ -22,7 +22,7 @@ The included plugin is automatically activated. It will create a `.scalafmt.conf
 
 ## Runner-dialect
 
-Since v3.1.0, [the Scalafmt `runner.dialect` option is mandatory](https://scalameta.org/scalafmt/docs/configuration.html#scala-dialects). This plugin automatically sets this option based on your current `ThisBuild / scalaVersion` setting. The `scala212source3`/`scala213source3` will be set if `scalaVersion` is set to those and `-Xsource:3` option is present under `ThisBuild / scalacOptions`.
+Since v3.1.0, [the Scalafmt `runner.dialect` option is mandatory](https://scalameta.org/scalafmt/docs/configuration.html#scala-dialects). This plugin automatically sets this option based on your current `ThisBuild / scalaVersion` setting. For Scala 3, version-specific dialects are used (e.g., `scala33` for Scala 3.3.x). The `scala212source3`/`scala213source3` will be set if `scalaVersion` is set to those and any `-Xsource:3` variant (like `-Xsource:3-cross`) is present under `ThisBuild / scalacOptions`.
 
 If for any reason you want to alter the generated dialect or specify the `runner.dialect` for a subset of files using `fileOverride` you can use the [`.scalafmt-extra.conf` file](#extra-configurations).
 
