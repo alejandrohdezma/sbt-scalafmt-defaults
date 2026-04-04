@@ -5,7 +5,7 @@
 Add the following line to your `plugins.sbt` file:
 
 ```sbt
-addSbtPlugin("com.alejandrohdezma" % "sbt-scalafmt-defaults" % "0.9.1")
+addSbtPlugin("com.alejandrohdezma" % "sbt-scalafmt-defaults" % "0.10.0")
 ```
 
 > You'll also need to provide the [`sbt-scalafmt` plugin](https://github.com/scalameta/sbt-scalafmt).
@@ -21,11 +21,11 @@ The included plugin is automatically activated. It will create a `.scalafmt.conf
 # To edit the original configurations go to
 # https://github.com/alejandrohdezma/sbt-scalafmt-defaults/edit/master/.scalafmt.conf
 
-version = "3.8.3"
+version = "3.10.7"
 
 # This value is automatically set based on your current `ThisBuild / scalaVersion` setting.
 # `scala212source3`/`scala213source3` will be set if `scalaVersion` is set to any of those versions
-#  and `-Xsource:3` option is present under `ThisBuild / scalacOptions`.
+#  and any `-Xsource:3` variant option is present under `ThisBuild / scalacOptions`.
 runner.dialect = scala212
 
 # Number of maximum characters in a column
@@ -116,7 +116,7 @@ project.excludePaths = ["glob:**metals.sbt"]
 
 ## Runner-dialect
 
-Since v3.1.0, [the Scalafmt `runner.dialect` option is mandatory](https://scalameta.org/scalafmt/docs/configuration.html#scala-dialects). This plugin automatically sets this option based on your current `ThisBuild / scalaVersion` setting. The `scala212source3`/`scala213source3` will be set if `scalaVersion` is set to those and `-Xsource:3` option is present under `ThisBuild / scalacOptions`.
+Since v3.1.0, [the Scalafmt `runner.dialect` option is mandatory](https://scalameta.org/scalafmt/docs/configuration.html#scala-dialects). This plugin automatically sets this option based on your current `ThisBuild / scalaVersion` setting. For Scala 3, version-specific dialects are used (e.g., `scala33` for Scala 3.3.x). The `scala212source3`/`scala213source3` will be set if `scalaVersion` is set to those and any `-Xsource:3` variant (like `-Xsource:3-cross`) is present under `ThisBuild / scalacOptions`.
 
 If for any reason you want to alter the generated dialect or specify the `runner.dialect` for a subset of files using `fileOverride` you can use the [`.scalafmt-extra.conf` file](#extra-configurations).
 
