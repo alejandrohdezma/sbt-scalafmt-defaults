@@ -33,7 +33,7 @@ object SbtScalafmtDefaults extends AutoPlugin {
   @SuppressWarnings(Array("scalafix:Disable.blocking.io", "scalafix:DisableSyntax.=="))
   override def buildSettings: Seq[Setting[_]] = Seq(
     scalafmtConfig := {
-      val xSource3 = scalacOptions.value.seq.exists(_ == "-Xsource:3")
+      val xSource3 = scalacOptions.value.seq.exists(_.startsWith("-Xsource:3"))
 
       val dialect = scalaVersion.value match {
         case v if v.startsWith("2.11")             => "scala211"
@@ -41,6 +41,13 @@ object SbtScalafmtDefaults extends AutoPlugin {
         case v if v.startsWith("2.12")             => "scala212"
         case v if v.startsWith("2.13") && xSource3 => "scala213source3"
         case v if v.startsWith("2.13")             => "scala213"
+        case v if v.startsWith("3.0")              => "scala30"
+        case v if v.startsWith("3.1")              => "scala31"
+        case v if v.startsWith("3.2")              => "scala32"
+        case v if v.startsWith("3.3")              => "scala33"
+        case v if v.startsWith("3.4")              => "scala34"
+        case v if v.startsWith("3.5")              => "scala35"
+        case v if v.startsWith("3.6")              => "scala36"
         case v if v.startsWith("3")                => "scala3"
       }
 
