@@ -31,9 +31,9 @@ object SbtScalafmtDefaults extends AutoPlugin {
   override def trigger = allRequirements
 
   @SuppressWarnings(Array("scalafix:Disable.blocking.io", "scalafix:DisableSyntax.=="))
-  override def buildSettings: Seq[Setting[_]] = Seq(
+  override def buildSettings = Seq(
     scalafmtConfig := {
-      val xSource3 = scalacOptions.value.seq.exists(_.startsWith("-Xsource:3"))
+      val xSource3 = scalacOptions.value.exists(_.startsWith("-Xsource:3"))
 
       val dialect = scalaVersion.value match {
         case v if v.startsWith("2.11")             => "scala211"
@@ -49,6 +49,7 @@ object SbtScalafmtDefaults extends AutoPlugin {
         case v if v.startsWith("3.5")              => "scala35"
         case v if v.startsWith("3.6")              => "scala36"
         case v if v.startsWith("3")                => "scala3"
+        case v                                     => sys.error(s"Unsupported Scala version: $v")
       }
 
       val defaults = Source
