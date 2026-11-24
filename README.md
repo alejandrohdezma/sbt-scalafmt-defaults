@@ -5,7 +5,7 @@
 Add the following line to your `plugins.sbt` file:
 
 ```sbt
-addSbtPlugin("com.alejandrohdezma" % "sbt-scalafmt-defaults" % "0.11.1")
+addSbtPlugin("com.alejandrohdezma" % "sbt-scalafmt-defaults" % "0.12.0")
 ```
 
 > You'll also need to provide the [`sbt-scalafmt` plugin](https://github.com/scalameta/sbt-scalafmt).
@@ -27,6 +27,14 @@ version = "3.11.5"
 # `scala212source3`/`scala213source3` will be set if `scalaVersion` is set to any of those versions
 #  and any `-Xsource:3` variant option is present under `ThisBuild / scalacOptions`.
 runner.dialect = scala212
+
+# Sources under `src/*/scala-3` only compile with Scala 3, so they're always parsed
+# with the Scala 3 dialect, whatever `ThisBuild / scalaVersion` is.
+fileOverride {
+  "glob:**/src/*/scala-3/**" {
+    runner.dialect = scala3
+  }
+}
 
 # Number of maximum characters in a column
 maxColumn = 120
