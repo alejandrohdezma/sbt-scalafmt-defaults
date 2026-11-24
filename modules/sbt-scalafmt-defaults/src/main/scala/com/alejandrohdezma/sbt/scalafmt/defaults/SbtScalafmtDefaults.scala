@@ -57,8 +57,8 @@ object SbtScalafmtDefaults extends AutoPlugin {
         .getLines()
         .toList
         .map {
-          case line if line.contains("runner.dialect") => s"runner.dialect = $dialect"
-          case line                                    => line
+          case line if line.startsWith("runner.dialect") => s"runner.dialect = $dialect"
+          case line                                      => line
         }
         .mkString("\n")
 

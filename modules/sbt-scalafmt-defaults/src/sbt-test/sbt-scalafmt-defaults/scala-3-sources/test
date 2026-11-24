@@ -1,0 +1,4 @@
+# this test ensures sources under `src/*/scala-3` are parsed with the Scala 3 dialect
+# even when `scalaVersion` is a Scala 2 version
+> scalafmtOnly src/main/scala-3/Main.scala
+$ must-mirror src/main/scala-3/Main.scala src/main/resources/Main.scala_expected
